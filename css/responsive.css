@@ -123,3 +123,16 @@ nav .logo{
         height: 180px;
     }
 }
+
+/* formulario */
+
+@media (max-width: 768px) {
+  body {
+    padding: 30px;
+  }
+  form {
+    width: 100%;
+  }
+}
+
+
