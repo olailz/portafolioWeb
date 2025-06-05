@@ -1,0 +1,125 @@
+/* media Query de barra de inicio y menu hamburguesa */
+/* navegacion hamburguesa */
+.hamburguesa{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburguesa span{
+    background: white;
+    height: 4px;
+    width: 25px;
+    margin: 4px;
+}
+@keyframes entrada{
+    from{opacity: 0; transform: translateY(20px);}
+    to{opacity: 1; transform: translateY(0);}
+}
+@media(max-width: 600px){
+    nav ul{
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 150px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+     nav ul li a {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+.hamburguesa{
+    display: flex;
+}
+nav ul.verMenu{
+    display: flex;
+}
+nav .logo{
+    font-size: 6vw;
+}
+}
+
+/* Media query de datos de inicio y foto */
+
+@media screen and (max-width: 768px){
+    .welcome{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .welcome-text{
+        max-width: 100%;
+    }
+    .welcome-text h1{
+        font-size: 45px;
+    }
+    .welcome-text h3{
+        font-size: 20px;
+    }
+    .welcome-text h2{
+        font-size: 28px;
+        max-width: 100%;
+    }
+    .welcome-text button{
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .welcome-img img{
+        width: 100%;
+        max-width: 200px;
+        margin-top: 30px;
+    }
+}
+
+/* Media Query de averda de */
+
+@media screen and (max-width: 768px)  {
+    .about-what{
+        flex-direction: column;
+        padding: 10px;
+        gap: 5px;
+        width: 100%;
+        font-size: 12px;
+    }
+    .about-what h3{
+        font-size:15px ;
+    }
+    .about h1{
+        font-size: 25px;
+    }
+    .about-section, .skills-section, .Interests-section,  .experience-section{
+        margin: 10px;
+        padding: 5px;
+    }
+}
+
+/* tercera seccion */
+@media screen and (max-width: 768px) {
+    .proyectos-services h1{
+        font-size: 25px;
+        padding-bottom: 0;
+        padding-top: 50px;
+    } 
+    .servicio{
+        margin: 10px;
+        padding: 15px;
+        max-width: 200px;
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .servicio h3{
+        font-size: 15px;
+    }
+    .servicio p{
+        font-size: 12px ;
+    }
+    .galeria img{
+        width: 150px;
+        height: 180px;
+    }
+}
