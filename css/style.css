@@ -145,7 +145,7 @@ nav ul li a:hover{
     max-width: 800px;
     padding: 20px;   
     color: white;
-    background-color:  #1e1e2f;
+    background-color:  #1c1a4127;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     margin: 0;
@@ -157,7 +157,10 @@ nav ul li a:hover{
 }
 /* footer */
 footer{
-    background-color: #222;
+  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0069;
+background: radial-gradient(circle, rgba(10, 0, 105, 1) 0%, rgba(12, 12, 87, 1) 50%, rgba(59, 0, 61, 1) 100%);
     color: white;
     padding: 20px;
     text-align: center;
@@ -183,7 +186,7 @@ footer{
   animation-name: fadeOutRight;
 }
 .servicio{
-    background-color: #1e1e2f;
+    background-color: #1c1a4127;
      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     border-radius: 12px;
     color: white;
@@ -216,82 +219,72 @@ footer{
 }
 
 /* formulario */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+.contacto{
+  display: flex; 
   justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-color: #1c1a4127;
+  margin: 0;
+  padding: 20px; 
 }
-
 form {
-    margin: 0;
-    align-items: center;
-  padding: 50px 55px;
-  background-color: #1e1e2f;
-     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  justify-content: center;
+  width: 100%;
+  max-width: 800px; /* puedes aumentar este valor si quieres más ancho */
+  padding: 50px;
+  background-color: #1c1a4127;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   text-align: center;
-  width: 340px;
+  display: flex;
+  flex-direction: column;
 }
 
 form h2 {
-  color: #3b82f6;
-  font-size: 25px;
-  padding-bottom: 20px;
-  padding-top: 2px;
-}
-
-.form-txt {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form-txt a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 15px;
-  margin-bottom: 25px;
-}
-
-.form-txt a:hover {
-  color: #3b82f6;
+  color: white;
+  font-size: 4em;
+  margin-bottom: 20px;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 input,
 textarea {
   background-color: #818ec6;
-  padding: 20px 14px;
-  margin-bottom: 25px;
-  border: 0;
+  padding: 20px;
+  border: none;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 1.1em;
   color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
 }
 
 ::placeholder {
   color: #bfc9f3;
-  font-size: 15px;
-}
-
-:focus {
-  outline: 1px solid white;
+  font-size: 1em;
 }
 
 .btn {
-    margin-top: 15px;
-    padding: 12px 24px;
-    background-color: #3b82f6;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 6px;
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
 }
 
 .btn:hover {
@@ -302,23 +295,7 @@ textarea {
 a{
   text-decoration:none;
 }
-.floating_btn {
-    margin-top: 50px; /* espacio arriba */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-/*   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content:center;
-  z-index: 1000; */
-}
+
 .contact_icon {
   background-color: #42db87;
   color: #fff;
@@ -348,4 +325,52 @@ a{
   margin-top: 8px;
   color: #707070;
   font-size: 13px;
+}
+.floating_btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* footer */
+.footer {
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.footer-left h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.footer-left p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.footer-right a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #00ff99;
 }

@@ -16,7 +16,7 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#acerca">Acerca de</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#">Contactos</a></li>
+                <li><a href="#contactos">Contactos</a></li>
             </ul>
             <div class="hamburguesa">
                 <span></span>
@@ -137,46 +137,45 @@
     </div>
     </div>
         </section>
+
 <!-- formulario -->
-        <form action="https://formsubmit.co/andersonbatistamateo@gmail.com" method="POST" autocomplete="off">
+<div class="contacto" id="contactos">
+  <form>
     <h2>Contacto</h2>
-    <div class="form-txt">
-      <a href="#">Politicas de privacidad</a>
-      <a href="#">Terminos y condiciones</a>
-    </div>
     <div class="input-group">
-
-      <input type="text" name="name" placeholder="Nombre">
-
-      <input type="tel" name="phone" placeholder="Telefono">
-
-      <input type="email" name="email" placeholder="Email">
-
-      <textarea name="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
-
-      <input class="btn" type="submit" value="Enviar">
-
-      <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
-
-      <input type="hidden" name="_captcha" value="false">
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo" required>
+      <textarea placeholder="Mensaje" required></textarea>
     </div>
+    <button class="btn" type="submit">Enviar</button>
   </form>
-<!-- whatsapp -->
-  <section>
-    <div class="floating_btn">
+
+  <!-- WhatsApp al lado derecho -->
+  <div class="floating_btn">
     <a target="_blank" href="https://wa.me/50245068464">
       <div class="contact_icon">
         <i class="fa fa-whatsapp my-float"></i>
       </div>
     </a>
-    <p class="text_icon">Talk to us?</p>
+    <p class="text_icon">Contactame</p>
   </div>
-  </section>
+</div>
+
 
     </main>
-    <footer>
-        <p>hola</p>
-    </footer>
+   <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Oliver Ibarra</h3>
+      <p>&copy; 2025 Todos los derechos reservados</p>
+    </div>
+    <div class="footer-right">
+      <a href="https://github.com/tuusuario" target="_blank"><i class="fa fa-github"></i></a>
+      <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <a href="mailto:tuemail@gmail.com"><i class="fa fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
     <script src="js/script.js"></script>
 </body>
 </html>

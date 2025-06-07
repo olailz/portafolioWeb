@@ -19,7 +19,10 @@
     nav ul{
         display: none;
         flex-direction: column;
-        background-color: #222;
+        list-style: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #0b006900;
+        background: radial-gradient(circle, rgba(10, 0, 105, 1) 0%, rgba(12, 12, 87, 1) 50%, rgba(59, 0, 61, 0.925) 100%);
         position: absolute;
         top: 60px;
         right: 10px;
@@ -125,14 +128,68 @@ nav .logo{
 }
 
 /* formulario */
-
 @media (max-width: 768px) {
   body {
-    padding: 30px;
+    padding: 0;
+    margin: 0;
   }
+
+  .contacto {
+    padding: 20px;
+    height: auto; /* permite que crezca si el contenido es más largo */
+    flex-direction: column; /* asegura que el contenido se apile */
+  }
+
   form {
     width: 100%;
+    padding: 30px 20px; /* reduce padding en móviles */
+    box-sizing: border-box;
+    border-radius: 15px;
+  }
+
+  .form-txt {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .btn {
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  .floating_btn {
+    right: 15px;
+    bottom: 15px;
   }
 }
 
+form h2 {
+  color: white;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
 
+input,
+textarea {
+  background-color: #818ec6;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.8em;
+  color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-right a {
+    font-size: 24px;
+  }
+}
