@@ -11,57 +11,16 @@
 }
 /* ------------------------ NAVEGACIÓN HAMBURGUESA ------------------------ */
 /* Responsive */
-/* Responsive solo para pantallas pequeñas */
+/* Estado inicial */
 #menu {
   display: none;
 }
-@media (max-width: 768px) {
-  .hamburguesa {
-    display: block;
-    cursor: pointer;
-  }
 
-  .hamburguesa span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle, rgba(10, 0, 105, 1) 0%, rgba(12, 12, 87, 1) 50%, rgba(59, 0, 61, 1) 100%);
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  nav ul.verMenu {
-    display: flex;
-  }
-}
-
-/* Para pantallas grandes, siempre mostrar el menú */
-@media (min-width: 769px) {
-  .hamburguesa {
-    display: none;
-  }
-
-  nav ul {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    background: none;
-  }
-  #menu.verMenu {
+/* Estado activo cuando se hace clic */
+#menu.verMenu {
   display: flex;
-  flex-direction: column;font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle, rgba(10, 0, 105, 1) 0%, rgba(12, 12, 87, 1) 50%, rgba(59, 0, 61, 1) 100%);
+  flex-direction: column;
+   background: radial-gradient(circle, rgba(10, 0, 105, 1) 0%, rgba(12, 12, 87, 1) 50%, rgba(59, 0, 61, 1) 100%);
   position: absolute;
   top: 70px;
   right: 20px;
@@ -70,7 +29,34 @@
   z-index: 999;
 }
 
+/* Estilos para icono hamburguesa */
+.hamburguesa {
+  display: block;
+  cursor: pointer;
 }
+
+.hamburguesa span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* Pantallas grandes: mostrar menú normalmente */
+@media (min-width: 769px) {
+  #menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+}
+
 
 /* ------------------------ SECCIÓN INICIO ------------------------ */
 @media(max-width: 768px) {
