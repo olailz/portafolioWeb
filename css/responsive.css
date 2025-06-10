@@ -1,150 +1,186 @@
-/* media Query de barra de inicio y menu hamburguesa */
-/* navegacion hamburguesa */
-.hamburguesa{
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+/* ------------------------ ANIMACIONES ------------------------ */
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.hamburguesa span{
-    background: white;
-    height: 4px;
-    width: 25px;
-    margin: 4px;
+/* ------------------------ NAVEGACIÓN HAMBURGUESA ------------------------ */
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
-@keyframes entrada{
-    from{opacity: 0; transform: translateY(20px);}
-    to{opacity: 1; transform: translateY(0);}
+.hamburguesa span {
+  background: white;
+  height: 4px;
+  width: 25px;
+  margin: 4px;
 }
-@media(max-width: 600px){
-    nav ul{
-        display: none;
-        flex-direction: column;
-        list-style: none;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #0b006900;
-        background: radial-gradient(circle, rgba(10, 0, 105, 1) 0%, rgba(12, 12, 87, 1) 50%, rgba(59, 0, 61, 0.925) 100%);
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        width: 150px;
-        padding: 20px;
-        border-radius: 8px;
-    }
-     nav ul li a {
-        font-size: 1rem;
-        padding: 10px 0;
-    }
 
-.hamburguesa{
+@media (max-width: 600px) {
+  .hamburguesa {
     display: flex;
-}
-nav ul.verMenu{
-    display: flex;
-}
-nav .logo{
-    font-size: 6vw;
-}
-}
-
-/* Media query de datos de inicio y foto */
-
-@media screen and (max-width: 768px){
-    .welcome{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .welcome-text{
-        max-width: 100%;
-    }
-    .welcome-text h1{
-        font-size: 45px;
-    }
-    .welcome-text h3{
-        font-size: 20px;
-    }
-    .welcome-text h2{
-        font-size: 28px;
-        max-width: 100%;
-    }
-    .welcome-text button{
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-    .welcome-img img{
-        width: 100%;
-        max-width: 200px;
-        margin-top: 30px;
-    }
-}
-
-/* Media Query de averda de */
-
-@media screen and (max-width: 768px)  {
-    .about-what{
-        flex-direction: column;
-        padding: 10px;
-        gap: 5px;
-        width: 100%;
-        font-size: 12px;
-    }
-    .about-what h3{
-        font-size:15px ;
-    }
-    .about h1{
-        font-size: 25px;
-    }
-    .about-section, .skills-section, .Interests-section,  .experience-section{
-        margin: 10px;
-        padding: 5px;
-    }
-}
-
-/* tercera seccion */
-@media screen and (max-width: 768px) {
-    .proyectos-services h1{
-        font-size: 25px;
-        padding-bottom: 0;
-        padding-top: 50px;
-    } 
-    .servicio{
-        margin: 10px;
-        padding: 15px;
-        max-width: 200px;
-        margin: auto;
-        margin-top: 0;
-        margin-bottom: 15px;
-    }
-    .servicio h3{
-        font-size: 15px;
-    }
-    .servicio p{
-        font-size: 12px ;
-    }
-    .galeria img{
-        width: 150px;
-        height: 180px;
-    }
-}
-
-/* formulario */
-@media (max-width: 768px) {
-  body {
-    padding: 0;
-    margin: 0;
   }
 
+  nav ul {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    background: radial-gradient(circle, rgba(10, 0, 105, 1) 0%, rgba(12, 12, 87, 1) 50%, rgba(59, 0, 61, 0.925) 100%);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 150px;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+
+  nav ul.verMenu {
+    display: flex;
+  }
+
+  nav .logo {
+    font-size: 6vw;
+  }
+}
+/* ------------------------ SECCIÓN INICIO ------------------------ */
+@media screen and (max-width: 768px) {
+  .welcome {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .welcome-text {
+    max-width: 100%;
+  }
+
+  .welcome-text h1 {
+    font-size: 45px;
+  }
+
+  .welcome-text h2 {
+    font-size: 28px;
+    max-width: 100%;
+  }
+
+  .welcome-text h3 {
+    font-size: 20px;
+  }
+
+  .welcome-text button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .welcome-img img {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 30px;
+  }
+}
+/* ------------------------ SECCIÓN ACERCA DE ------------------------ */
+@media screen and (max-width: 768px) {
+  .about-what {
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .about-what h3 {
+    font-size: 15px;
+  }
+
+  .about h1 {
+    font-size: 25px;
+  }
+
+  .about-section,
+  .skills-section,
+  .Interests-section,
+  .experience-section {
+    margin: 10px;
+    padding: 5px;
+  }
+}
+
+/* ------------------------ SECCIÓN PROYECTOS ------------------------ */
+@media screen and (max-width: 768px) {
+  .proyectos-services h1 {
+    font-size: 25px;
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .servicio {
+    max-width: 200px;
+    margin: 0 auto 15px;
+    padding: 15px;
+  }
+
+  .servicio h3 {
+    font-size: 15px;
+  }
+
+  .servicio p {
+    font-size: 12px;
+  }
+
+  .galeria img {
+    width: 150px;
+    height: 180px;
+  }
+}
+
+/* ------------------------ FORMULARIO DE CONTACTO ------------------------ */
+@media (max-width: 768px) {
   .contacto {
     padding: 20px;
-    height: auto; /* permite que crezca si el contenido es más largo */
-    flex-direction: column; /* asegura que el contenido se apile */
+    height: auto;
+    flex-direction: column;
   }
 
   form {
     width: 100%;
-    padding: 30px 20px; /* reduce padding en móviles */
+    padding: 30px 20px;
     box-sizing: border-box;
     border-radius: 15px;
+  }
+
+  form h2 {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  input,
+  textarea {
+    background-color: #818ec6;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.8em;
+    color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .form-txt {
@@ -164,25 +200,7 @@ nav .logo{
   }
 }
 
-form h2 {
-  color: white;
-  font-size: 1em;
-  margin-bottom: 20px;
-}
-
-input,
-textarea {
-  background-color: #818ec6;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  font-size: 0.8em;
-  color: #ffffff;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Responsive */
+/* ------------------------ FOOTER RESPONSIVE ------------------------ */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
