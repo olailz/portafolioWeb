@@ -10,6 +10,7 @@
   }
 }
 /* ------------------------ NAVEGACIÓN HAMBURGUESA ------------------------ */
+/* Responsive */
 .hamburguesa {
   display: none;
   flex-direction: column;
@@ -22,11 +23,10 @@
   margin: 4px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .hamburguesa {
     display: flex;
   }
-
   nav ul {
     display: none;
     flex-direction: column;
@@ -40,26 +40,25 @@
     border-radius: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-
+nav ul.verMenu {
+    display: flex;
+  }
   nav ul li a {
     font-size: 1rem;
     padding: 10px 0;
   }
-
-  nav ul.verMenu {
-    display: flex;
-  }
-
   nav .logo {
     font-size: 6vw;
   }
 }
+
 /* ------------------------ SECCIÓN INICIO ------------------------ */
-@media screen and (max-width: 768px) {
+@media(max-width: 768px) {
   .welcome {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 10px;
   }
 
   .welcome-text {
@@ -84,12 +83,14 @@
     font-size: 14px;
   }
 
-  .welcome-img img {
+  .welcome-img{
     width: 100%;
-    max-width: 200px;
-    margin-top: 30px;
+    height: auto;
+    display: block;
+    max-width: 250px;
   }
 }
+
 /* ------------------------ SECCIÓN ACERCA DE ------------------------ */
 @media screen and (max-width: 768px) {
   .about-what {
@@ -118,31 +119,41 @@
 }
 
 /* ------------------------ SECCIÓN PROYECTOS ------------------------ */
+/* Animación de entrada */
+@keyframes fade-in-up {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
   .proyectos-services h1 {
-    font-size: 25px;
-    padding-top: 50px;
-    padding-bottom: 0;
+    font-size: 2rem;
+    padding-top: 30px;
   }
 
   .productos {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
   .servicio {
     max-width: 200px;
-    margin: 0 auto 15px;
     padding: 15px;
   }
 
   .servicio h3 {
-    font-size: 15px;
+    font-size: 1.1rem;
   }
 
   .servicio p {
-    font-size: 12px;
+    font-size: 0.9rem;
   }
 
   .galeria img {
