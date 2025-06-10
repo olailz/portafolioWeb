@@ -11,45 +11,65 @@
 }
 /* ------------------------ NAVEGACIÓN HAMBURGUESA ------------------------ */
 /* Responsive */
-.hamburguesa {
+/* Responsive solo para pantallas pequeñas */
+#menu {
   display: none;
-  flex-direction: column;
-  cursor: pointer;
 }
-.hamburguesa span {
-  background: white;
-  height: 4px;
-  width: 25px;
-  margin: 4px;
-}
-
 @media (max-width: 768px) {
   .hamburguesa {
-    display: flex;
+    display: block;
+    cursor: pointer;
   }
+
+  .hamburguesa span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+  }
+
   nav ul {
     display: none;
     flex-direction: column;
-    list-style: none;
-    background: radial-gradient(circle, rgba(10, 0, 105, 1) 0%, rgba(12, 12, 87, 1) 50%, rgba(59, 0, 61, 0.925) 100%);
+    font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle, rgba(10, 0, 105, 1) 0%, rgba(12, 12, 87, 1) 50%, rgba(59, 0, 61, 1) 100%);
     position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 150px;
-    padding: 20px;
+    top: 70px;
+    right: 20px;
+    padding: 10px;
     border-radius: 8px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-nav ul.verMenu {
+
+  nav ul.verMenu {
     display: flex;
   }
-  nav ul li a {
-    font-size: 1rem;
-    padding: 10px 0;
+}
+
+/* Para pantallas grandes, siempre mostrar el menú */
+@media (min-width: 769px) {
+  .hamburguesa {
+    display: none;
   }
-  nav .logo {
-    font-size: 6vw;
+
+  nav ul {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
   }
+  #menu.verMenu {
+  display: flex;
+  flex-direction: column;font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle, rgba(10, 0, 105, 1) 0%, rgba(12, 12, 87, 1) 50%, rgba(59, 0, 61, 1) 100%);
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
 }
 
 /* ------------------------ SECCIÓN INICIO ------------------------ */
