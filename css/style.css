@@ -10,6 +10,7 @@ body{
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
     background: #0a0069;
+     width: 100%;
 background: radial-gradient(circle, rgba(10, 0, 105, 1) 0%, rgba(12, 12, 87, 1) 50%, rgba(59, 0, 61, 1) 100%);
 }
 a {
